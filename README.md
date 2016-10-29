@@ -1,48 +1,82 @@
 1.Length of Longest Palindrome that can be built from letters
+
+
 public int longestPalindrome(String s){		
+
 int rt = s.length()-1, lt;
+
 int max = 1, maxtemp, lttemp, rttemp;
 
-while(rt>=0){		
+while(rt>=0){	
+
 				
 lt = rt - 1;
+
 maxtemp = 0;
+
 lttemp = lt;
+
 rttemp = rt;
-while(rttemp<s.length()&&lttemp>=0){				
+
+while(rttemp<s.length()&&lttemp>=0){
+
 if(s.charAt(lttemp)==s.charAt(rttemp)){
+
 lttemp--;
+
 rttemp++;
+
 maxtemp+=2;	
-}else{
+
+}
+else{
 break;
+
 }			
 }
 		
 if(maxtemp>max)
+
 max = maxtemp;
+
 						
 lt = rt - 2;
+
 maxtemp = 1;
+
 lttemp = lt;
+
 rttemp = rt;
-while(rttemp<s.length()&&lttemp>=0){				
+
+while(rttemp<s.length()&&lttemp>=0){
+
 if(s.charAt(lttemp)==s.charAt(rttemp)){
+
 lttemp--;
+
 rttemp++;
-maxtemp+=2;	
-}else{
+
+maxtemp+=2;
+
+}
+else{
+
 break;
+
 }			
 }
 			
 if(maxtemp>max)
+
 max = maxtemp;
+
 		
 rt--;	
+
 			
 }
 return max;
+
 		
 }
 	
@@ -51,6 +85,8 @@ return max;
 
 
 2.Algorithm to find maximum stock profit
+
+
 
 public int maxProfit(int[] prices) {
 
@@ -74,6 +110,8 @@ return sum;
 
 
 3.Given a column number in Excel, return corresponding column number
+
+
 
 public int titleToNumber(String str) {
 
